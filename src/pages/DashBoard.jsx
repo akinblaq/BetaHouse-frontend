@@ -13,7 +13,7 @@ export default function Dashboard() {
       const token = localStorage.getItem("token");
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/protected/dashboard",
+          "https://betahouse-backend-mvz8.onrender.com/api/protected/dashboard",
           {
             headers: {
               Authorization: `Bearer ${token}`,

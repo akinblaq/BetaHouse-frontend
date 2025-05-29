@@ -28,11 +28,14 @@ export default function SignUp() {
     const fullName = `${form.firstname} ${form.lastname}`;
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", {
-        name: fullName,
-        email: form.email,
-        password: form.password,
-      });
+      const res = await axios.post(
+        "https://betahouse-backend-mvz8.onrender.com/api/auth/signup",
+        {
+          name: fullName,
+          email: form.email,
+          password: form.password,
+        }
+      );
 
       localStorage.setItem("token", res.data.token);
       alert("Sign up successful");
