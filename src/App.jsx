@@ -5,13 +5,11 @@ import Dashboard from "./pages/DashBoard";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 }
 
