@@ -1,0 +1,226 @@
+/* src/styles/Auth.css */
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+.papa-auth {
+  display: flex;
+  background-color: #ffffff;
+  max-width: 1440px;
+  padding: 0;
+}
+
+.auth-container {
+  width: 400px;
+  margin: 80px auto;
+  padding: 0 4rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.auth-container h2 {
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 1rem;
+  text-align: start;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.auth-container p {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  padding-right: 2rem;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-container input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.auth-container input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.auth-container .sum-but {
+  padding: 1.3rem 0;
+  background: #3d9970;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.auth-container button:hover {
+  background-color: rgba(145, 145, 145, 0.558);
+  color: #000000;
+}
+
+.or-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.or-div p {
+  color: #4f4e4e;
+}
+
+.or-div hr {
+  width: 150px;
+  background-color: #f7f7f7;
+}
+
+.auth-container p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.google-but {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 400px;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Outfit", sans-serif;
+  transition: background-color 0.3s;
+  padding: 1.3rem 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background-color: #ffffff;
+}
+
+.new-user {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.new-user a {
+  color: #388e3c;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+label {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.remember-me {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  font-family: "DM Sans", sans-serif;
+  color: #716f6f;
+}
+
+.remember-me input {
+  margin-right: 0.4rem;
+}
+
+.forgot-password {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: #ec5e5e;
+}
+
+/* ============================== */
+
+.back-ground {
+  width: 912px;
+}
+
+.back-ground img {
+  margin: 3rem 0 0 2rem;
+}
+
+/* ============================= */
+
+/* SIGNUP FINISHING STYLING */
+
+.names {
+  display: flex;
+  gap: 3rem;
+}
+
+.names input {
+  width: 9.3rem;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth-container h4 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  margin-top: 0;
+}
+
+span {
+  color: #3d9970;
+}
+/* ===============Media query=============== */
+@media (max-width: 500px) {
+  .auth-container {
+    margin: 40px 20px;
+    padding: 1.5rem;
+  }
+}
