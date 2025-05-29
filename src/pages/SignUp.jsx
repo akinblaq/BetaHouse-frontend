@@ -119,8 +119,9 @@ export default function SignUp() {
 
           <div className="form-footer">
             <label className="Term">
-              <input type="checkbox" required />I agree to{" "}
-              <span>Terms of Service</span> and <span>Privacy Policies</span>
+              <input name="checkbox" id="checkbox" type="checkbox" required />I
+              agree to <span>Terms of Service</span> and{" "}
+              <span>Privacy Policies</span>
             </label>
           </div>
 
