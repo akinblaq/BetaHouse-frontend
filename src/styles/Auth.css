@@ -39,6 +39,8 @@
   letter-spacing: 0%;
   vertical-align: middle;
   padding-right: 2rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .auth-container form {
@@ -91,11 +93,6 @@
   background-color: #f7f7f7;
 }
 
-.auth-container p {
-  text-align: center;
-  margin-top: 1rem;
-}
-
 .google-but {
   display: flex;
   align-items: center;
@@ -105,11 +102,10 @@
   border-radius: 8px;
   border: 1px solid #000000;
   cursor: pointer;
+  transition: background-color 0.3s;
   font-weight: bold;
   font-family: "Outfit", sans-serif;
-  transition: background-color 0.3s;
   padding: 1.3rem 0;
-  font-weight: 400;
   font-size: 22px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -216,11 +212,4 @@ label {
 
 span {
   color: #3d9970;
-}
-/* ===============Media query=============== */
-@media (max-width: 500px) {
-  .auth-container {
-    margin: 40px 20px;
-    padding: 1.5rem;
-  }
 }

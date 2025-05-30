@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/NavBar.css";
 import logo from "../assets/Group 9282.png";
-import { CiCirclePlus } from "react-icons/ci";
-import { CiCircleMinus } from "react-icons/ci";
+import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 import bgImage from "../assets/Frame 9325.png";
 
 function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <section
       className="property"
@@ -17,14 +24,21 @@ function NavBar() {
       <nav>
         <div className="nav-prop">
           <img src={logo} alt="" />
-          <div className="div-a">
+
+          {/* Hamburger icon for small screens */}
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? <IoMdClose size={24} /> : <GiHamburgerMenu size={24} />}
+          </div>
+
+          <div className={`div-a ${menuOpen ? "show" : ""}`}>
             <a href="">Home</a>
             <a href="#properties">Properties</a>
             <a href="#footer">About Us</a>
             <a href="#footer">Blog</a>
             <a href="#footer">ContactUs</a>
           </div>
-          <div className="div-but">
+
+          <div className={`div-but ${menuOpen ? "show" : ""}`}>
             <a href="/signup">
               <button className="but-1">Signup</button>
             </a>
@@ -34,8 +48,8 @@ function NavBar() {
           </div>
         </div>
       </nav>
-      {/* ======================== */}
 
+      {/* Hero text and filter form */}
       <div className="details">
         <div className="texts">
           <h3>Browse Our Properties</h3>
@@ -44,7 +58,7 @@ function NavBar() {
             now!
           </p>
         </div>
-        {/* ======== */}
+
         <div className="div-shadow">
           <div className="div-con">
             <div className="divs">
@@ -63,14 +77,13 @@ function NavBar() {
                 <input
                   id="property"
                   name="property"
-                  type="property"
-                  placeholder="eg. Duplex, Bedroom Fla"
+                  type="text"
+                  placeholder="eg. Duplex, Bedroom Flat"
                 />
               </div>
 
-              {/* ====== 3rd div info==== */}
               <div className="div-3">
-                <h4>BEDROOM</h4>
+                <h4>BEDROOMS</h4>
                 <div className="div-3-child">
                   <CiCircleMinus className="circle" />
                   <p>0</p>
@@ -78,7 +91,6 @@ function NavBar() {
                 </div>
               </div>
             </div>
-            {/* ========== */}
             <button className="but-4">Find Property</button>
           </div>
         </div>
