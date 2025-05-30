@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 .wrap {
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 0 2rem 0;
   background-color: #ffff;
   width: 1440px;
   margin: auto;

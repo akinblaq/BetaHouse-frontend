@@ -25,11 +25,6 @@ function NavBar() {
         <div className="nav-prop">
           <img src={logo} alt="" />
 
-          {/* Hamburger icon for small screens */}
-          <div className="hamburger" onClick={toggleMenu}>
-            {menuOpen ? <IoMdClose size={24} /> : <GiHamburgerMenu size={24} />}
-          </div>
-
           <div className={`div-a ${menuOpen ? "show" : ""}`}>
             <a href="">Home</a>
             <a href="#properties">Properties</a>
@@ -46,6 +41,10 @@ function NavBar() {
               <button className="but-2">Login</button>
             </a>
           </div>
+          {/* Hamburger icon for small screens */}
+          {/* <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? <IoMdClose size={24} /> : <GiHamburgerMenu size={24} />}
+          </div> */}
         </div>
       </nav>
 
