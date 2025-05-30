@@ -10,7 +10,7 @@
 .papa-auth {
   display: flex;
   background-color: #ffffff;
-  max-width: 1440px;
+  width: 1440px;
   padding: 0;
 }
 
@@ -86,6 +86,7 @@
 
 .or-div p {
   color: #4f4e4e;
+  padding: 0;
 }
 
 .or-div hr {
