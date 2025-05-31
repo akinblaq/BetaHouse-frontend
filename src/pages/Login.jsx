@@ -1,5 +1,5 @@
 import "../styles/Auth.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import google from "../assets/🦆 icon _google_.png";
@@ -7,9 +7,14 @@ import logo from "../assets/Group 9282.png";
 import background from "../assets/frameback.png";
 
 export default function Login() {
+  const [animate, setAnimate] = useState(false);
   const [form, setForm] = useState({ email: "", password: "" });
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100);
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -39,7 +44,7 @@ export default function Login() {
   };
 
   return (
-    <div className="papa-auth">
+    <div className={`papa-auth page-wrapper ${animate ? "fade-in" : ""}`}>
       <div className="auth-container">
         <h2>Welcome Back to BetaHouse</h2>
         <p>Let's get started by filling out the information below</p>

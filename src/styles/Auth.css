@@ -214,3 +214,15 @@ label {
 span {
   color: #3d9970;
 }
+
+/* PageTransition.css */
+.page-wrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.page-wrapper.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

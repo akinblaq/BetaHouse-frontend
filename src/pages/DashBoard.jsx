@@ -4,9 +4,11 @@ import NavBar from "../components/NavBar";
 import PropertyCard from "../components/PropertyCard";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
+import "../styles/Dashboard.css";
 
 export default function Dashboard() {
   const [message, setMessage] = useState("");
+  const [animate, setAnimate] = useState(false);
   const [filters, setFilters] = useState({
     location: "",
     propertyType: "",
@@ -32,6 +34,9 @@ export default function Dashboard() {
     };
 
     fetchProtected();
+
+    // Trigger animation
+    setTimeout(() => setAnimate(true), 100);
   }, []);
 
   // Receive filter values from NavBar
@@ -40,7 +45,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div>
+    <div className={`dashboard-wrapper ${animate ? "fade-in" : ""}`}>
       <NavBar onFilter={handleFilter} />
       <PropertyCard filters={filters} />
       <CTA />

@@ -1,11 +1,12 @@
 import "../styles/Auth.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import google from "../assets/🦆 icon _google_.png";
 import logo from "../assets/Group 9282.png";
 import background from "../assets/frameback.png";
 
 export default function SignUp() {
+  const [animate, setAnimate] = useState(false);
   const [form, setForm] = useState({
     firstname: "",
     lastname: "",
@@ -13,6 +14,10 @@ export default function SignUp() {
     password: "",
     confirmpassword: "",
   });
+
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100);
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -45,7 +50,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="papa-auth">
+    <div className={`papa-auth page-wrapper ${animate ? "fade-in" : ""}`}>
       <div className="auth-container">
         <h4>
           Join our community of home seekers and explore the possibilities that
