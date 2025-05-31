@@ -6,11 +6,23 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import bgImage from "../assets/Frame 9325.png";
 
-function NavBar() {
+function NavBar({ onFilter }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [location, setLocation] = useState("");
+  const [propertyType, setPropertyType] = useState("");
+  const [bedrooms, setBedrooms] = useState(0);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleSubmit = () => {
+    onFilter({ location, propertyType, bedrooms });
+  };
+
+  const incrementBedrooms = () => setBedrooms(bedrooms + 1);
+  const decrementBedrooms = () => {
+    if (bedrooms > 0) setBedrooms(bedrooms - 1);
   };
 
   return (
@@ -41,14 +53,13 @@ function NavBar() {
               <button className="but-2">Login</button>
             </a>
           </div>
-          {/* Hamburger icon for small screens */}
+
           {/* <div className="hamburger" onClick={toggleMenu}>
             {menuOpen ? <IoMdClose size={24} /> : <GiHamburgerMenu size={24} />}
           </div> */}
         </div>
       </nav>
 
-      {/* Hero text and filter form */}
       <div className="details">
         <div className="texts">
           <h3>Browse Our Properties</h3>
@@ -68,6 +79,8 @@ function NavBar() {
                   name="text"
                   type="text"
                   placeholder="eg. Gbagada"
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
                 />
               </div>
 
@@ -77,20 +90,30 @@ function NavBar() {
                   id="property"
                   name="property"
                   type="text"
-                  placeholder="eg. Duplex, Bedroom Flat"
+                  placeholder="eg. Duplex, Bedroom, Flat"
+                  value={propertyType}
+                  onChange={(e) => setPropertyType(e.target.value)}
                 />
               </div>
 
               <div className="div-3">
                 <h4>BEDROOMS</h4>
                 <div className="div-3-child">
-                  <CiCircleMinus className="circle" />
-                  <p>0</p>
-                  <CiCirclePlus className="circle" />
+                  <CiCircleMinus
+                    className="circle"
+                    onClick={decrementBedrooms}
+                  />
+                  <p>{bedrooms}</p>
+                  <CiCirclePlus
+                    className="circle"
+                    onClick={incrementBedrooms}
+                  />
                 </div>
               </div>
             </div>
-            <button className="but-4">Find Property</button>
+            <button className="but-4" onClick={handleSubmit}>
+              Find Property
+            </button>
           </div>
         </div>
       </div>

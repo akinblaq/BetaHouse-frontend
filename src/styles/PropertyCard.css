@@ -42,22 +42,25 @@
   gap: 1rem;
 }
 
-.second-div p {
+.second-div span {
   font-weight: 400;
   font-size: 21px;
   line-height: 35.91px;
   letter-spacing: 0%;
   vertical-align: middle;
-  color: #181a20;
+  color: #717171;
   margin: 0 0;
 }
 
-.second-div p span {
-  color: #717171;
-}
-
-.second-div img {
-  width: 1.5rem;
+.second-div select {
+  border: none;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 35.91px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  outline: none;
+  padding: 0 2rem;
 }
 
 .property-grid {

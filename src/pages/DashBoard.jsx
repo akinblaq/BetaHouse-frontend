@@ -7,6 +7,11 @@ import Footer from "../components/Footer";
 
 export default function Dashboard() {
   const [message, setMessage] = useState("");
+  const [filters, setFilters] = useState({
+    location: "",
+    propertyType: "",
+    bedrooms: 0,
+  });
 
   useEffect(() => {
     const fetchProtected = async () => {
@@ -29,10 +34,15 @@ export default function Dashboard() {
     fetchProtected();
   }, []);
 
+  // Receive filter values from NavBar
+  const handleFilter = (filterValues) => {
+    setFilters(filterValues);
+  };
+
   return (
     <div>
-      <NavBar />
-      <PropertyCard />
+      <NavBar onFilter={handleFilter} />
+      <PropertyCard filters={filters} />
       <CTA />
       <Footer />
     </div>

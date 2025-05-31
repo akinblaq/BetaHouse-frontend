@@ -1,0 +1,62 @@
+.property-card.skeleton {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.image-div-skeleton {
+  height: 300px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #ccc;
+}
+
+.texts-below {
+  padding: 1rem;
+}
+
+.skeleton-title,
+.skeleton-info,
+.skeleton-meta {
+  height: 16px;
+  background-color: #e0e0e0;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 20px;
+}
+
+.skeleton-info {
+  width: 80%;
+}
+
+.skeleton-meta {
+  width: 40%;
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(
+    to right,
+    #eeeeee 0%,
+    #dddddd 20%,
+    #eeeeee 40%,
+    #eeeeee 100%
+  );
+  background-size: 800px 104px;
+  animation: shimmer 1.2s infinite linear forwards;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}
