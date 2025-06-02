@@ -20,15 +20,27 @@ const Footer = () => {
           <div className="three-p-img">
             <div className="p-div">
               <img src={location} alt="" />
-              <p>95 Tinubu Estate, Lekki, Lagos</p>
+              <p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=95+Tinubu+Estate,+Lekki,+Lagos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  95 Tinubu Estate, Lekki, Lagos
+                </a>
+              </p>
             </div>
             <div className="p-div">
               <img src={phone} alt="" />
-              <p>+234 675 8935 675</p>
+              <p>
+                <a href="tel:+234 675 8935 675">+234 675 8935 675</a>
+              </p>
             </div>
             <div className="p-div">
               <img src={email} alt="" />
-              <p>support@rentbetahouse.com</p>
+              <p>
+                <a href="mailto:contact@betahouse.com">contact@betahouse.com</a>
+              </p>
             </div>
           </div>
         </div>
