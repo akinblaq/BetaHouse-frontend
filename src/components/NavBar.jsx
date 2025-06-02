@@ -83,7 +83,7 @@ function NavBar({ onFilter }) {
                   onChange={(e) => setLocation(e.target.value)}
                 />
               </div>
-
+              <hr className="vertical-line" />
               <div className="div-2">
                 <h4>PROPERTY TYPE</h4>
                 <input
@@ -95,7 +95,7 @@ function NavBar({ onFilter }) {
                   onChange={(e) => setPropertyType(e.target.value)}
                 />
               </div>
-
+              <hr className="vertical-line" />
               <div className="div-3">
                 <h4>BEDROOMS</h4>
                 <div className="div-3-child">

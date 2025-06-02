@@ -139,9 +139,17 @@ nav {
 
 .divs {
   display: flex;
-  gap: 8rem;
+  gap: 2rem;
   align-items: center;
   padding-left: 4rem;
+}
+
+.vertical-line {
+  width: 1px; /* Thin line */
+  height: 40px; /* Set height as needed */
+  background-color: #cbcaca; /* Line color */
+  border: none; /* Remove default border */
+  margin-right: 4rem;
 }
 
 .divs h4 {
