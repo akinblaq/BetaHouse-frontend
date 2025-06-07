@@ -7,6 +7,9 @@
 #footer {
   background: #035a33;
   color: #ffff;
+}
+
+.div-footer {
   width: 1440px;
   margin: auto;
 }
@@ -102,10 +105,15 @@ li {
 }
 
 .foot-down-div {
+  border-top: 1px solid #6f6f6f;
+}
+
+.foot-down-div-two {
+  width: 25%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0 6rem;
-  border-top: 1px solid #6f6f6f;
+  padding: 0;
 }
 
 .foot-down-div p {

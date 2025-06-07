@@ -3,10 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 .property {
-  width: 1440px;
-  min-width: 768px;
   height: 680px;
-  margin: auto;
   display: flex;
 }
 
@@ -221,3 +218,5 @@ nav {
   background-color: rgba(41, 40, 40, 0.558);
   color: black;
 }
+
+/* ============================= */
