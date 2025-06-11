@@ -17,7 +17,15 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchProtected = async () => {
-      const token = localStorage.getItem("token");
+      // ✅ Check both localStorage and sessionStorage
+      const token =
+        localStorage.getItem("token") || sessionStorage.getItem("token");
+
+      if (!token) {
+        setMessage("Access denied. Please login.");
+        return;
+      }
+
       try {
         const res = await axios.get(
           "https://betahouse-backend-mvz8.onrender.com/api/protected/dashboard",
@@ -47,6 +55,7 @@ export default function Dashboard() {
   return (
     <div className={`dashboard-wrapper ${animate ? "fade-in" : ""}`}>
       <NavBar onFilter={handleFilter} />
+      <h2 style={{ textAlign: "center", marginTop: "2rem" }}>{message}</h2>
       <PropertyCard filters={filters} />
       <CTA />
       <Footer />

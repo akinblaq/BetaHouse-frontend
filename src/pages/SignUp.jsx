@@ -55,14 +55,14 @@ export default function SignUp() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      // Optional: save token
       const token = await user.getIdToken();
-      localStorage.setItem("token", token);
+      localStorage.setItem("token", token); // Save session token
 
-      alert("Google signup successful");
+      // alert("Google sign-up successful");
+      window.location.href = "/dashboard"; // or use navigate("/dashboard")
     } catch (error) {
+      console.error("Google sign-up failed", error);
       alert("Google sign-up failed");
-      console.error(error);
     }
   };
 

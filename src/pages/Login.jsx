@@ -49,14 +49,14 @@ export default function Login() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      // Optional: save token if needed
       const token = await user.getIdToken();
-      localStorage.setItem("token", token);
+      localStorage.setItem("token", token); // or sessionStorage if preferred
 
+      alert("Google sign-in successful");
       navigate("/dashboard");
     } catch (error) {
+      console.error("Google sign-in failed", error);
       alert("Google sign-in failed");
-      console.error(error);
     }
   };
 
