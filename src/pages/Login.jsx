@@ -52,7 +52,7 @@ export default function Login() {
       const token = await user.getIdToken();
       localStorage.setItem("token", token); // or sessionStorage if preferred
 
-      alert("Google sign-in successful");
+      // alert("Google sign-in successful");
       navigate("/dashboard");
     } catch (error) {
       console.error("Google sign-in failed", error);
