@@ -55,7 +55,9 @@ export default function Dashboard() {
   return (
     <div className={`dashboard-wrapper ${animate ? "fade-in" : ""}`}>
       <NavBar onFilter={handleFilter} />
-      <h2 style={{ textAlign: "center", marginTop: "2rem" }}>{message}</h2>
+      <h2 className="hhh" style={{ textAlign: "center", marginTop: "2rem" }}>
+        {message}
+      </h2>
       <PropertyCard filters={filters} />
       <CTA />
       <Footer />

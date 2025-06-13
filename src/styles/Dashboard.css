@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
 .dashboard-wrapper {
   opacity: 0;
   transform: translateY(40px);
@@ -7,4 +9,10 @@
 .dashboard-wrapper.fade-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.hhh {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Exo 2", sans-serif;
 }
